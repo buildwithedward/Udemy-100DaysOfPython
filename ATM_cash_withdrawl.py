@@ -73,3 +73,5 @@ while transaction_on:
         choice = input("what would you like to do (withdrawal/deposit): ")
         bank_operation(choice, card_display)
         proceed_transaction()
+    else:
+        print("Out of Cash. Please check our nearby ATM")
