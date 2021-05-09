@@ -1,5 +1,4 @@
-import random
-from getpass import getpass
+
 money = {
     500: 200,
     200: 500,
@@ -29,9 +28,3 @@ cards = {
     }
 
 }
-
-# passwd = getpass(prompt="Enter your password? ")
-# if int(passwd) == 6196:
-#     print("Welcome!")
-# else:
-#     print("Incorrect password!")

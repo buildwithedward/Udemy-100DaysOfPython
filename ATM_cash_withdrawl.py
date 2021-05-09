@@ -46,8 +46,6 @@ def bank_operation(user_choice, card_selected):
             ATM_money += amount
             print("Amount Deposited! Have a nice day! ")
 
-            #print(pass_check(card_display, passwd))
-
 
 def proceed_transaction():
     global transaction_on
