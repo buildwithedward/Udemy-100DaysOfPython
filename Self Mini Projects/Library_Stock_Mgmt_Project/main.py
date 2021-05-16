@@ -11,9 +11,7 @@ for books in book_data:
     book_details.append(details)
 
 lib = Stock(book_details)
-
 proceed = True
-
 
 while proceed:
     user = input("Do you know the book name (y/n): ").lower()
