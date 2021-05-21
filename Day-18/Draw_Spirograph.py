@@ -13,9 +13,22 @@ def random_color():
     return color
 
 
-t.speed('fastest')
+tim.speed('fastest')
+tim.width(2)  # changing pensize as 1
 ########### Challenge 5 - Spirograph ########
-for _ in range(35):
-    t.color(random_color())
-    t.circle(100)
-    t.left(10)
+
+
+def draw_spirograph(size_gap):
+    """draw spirograph based on fixed size gap"""
+    for _ in range(int(360/size_gap)):  # range only accepts whole number
+        tim.color(random_color())
+        tim.circle(100)
+        current_heading = tim.heading()  # displays current heading position (0,0)
+        tim.setheading(current_heading + size_gap)
+
+
+draw_spirograph(5)
+
+
+screen = t.Screen()
+screen.exitonclick()
