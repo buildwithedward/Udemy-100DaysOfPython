@@ -22,4 +22,4 @@ for _ in range(200):
     tim.color(generate_random_color())
     tim.forward(45)
     # Set the orientation of the turtle to to_angle
-    tim.setheading(random.choice(directions))
+    tim.seth(random.choice(directions))

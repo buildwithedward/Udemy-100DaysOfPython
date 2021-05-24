@@ -24,7 +24,7 @@ def draw_spirograph(size_gap):
         tim.color(random_color())
         tim.circle(100)
         current_heading = tim.heading()  # displays current heading position (0,0)
-        tim.setheading(current_heading + size_gap)
+        tim.seth(current_heading + size_gap)
 
 
 draw_spirograph(5)

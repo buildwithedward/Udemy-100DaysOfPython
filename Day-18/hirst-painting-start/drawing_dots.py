@@ -12,9 +12,9 @@ color_list = [(202, 164, 109), (238, 240, 245), (150, 75, 49), (223, 201, 135), 
                                                                                                                                                                                             178, 148), (13, 99, 71), (233, 175, 164), (161, 142, 158), (105, 74, 77), (55, 46, 50), (183, 205, 171), (36, 60, 74), (18, 86, 90), (81, 148, 129), (148, 17, 20), (14, 70, 64), (30, 68, 100), (107, 127, 153), (174, 94, 97), (176, 192, 209)]
 
 # to display all the points we are moving heading
-tim.setheading(225)
+tim.seth(225)
 tim.fd(300)
-tim.setheading(0)
+tim.seth(0)
 
 no_counts = 100
 
@@ -23,11 +23,11 @@ for dot_count in range(1, no_counts + 1):
     tim.fd(50)
 
     if dot_count % 10 == 0:  # after every 10th dot it'll turn direction
-        tim.setheading(90)
+        tim.seth(90)
         tim.fd(50)
-        tim.setheading(180)
+        tim.seth(180)
         tim.fd(500)
-        tim.setheading(0)
+        tim.seth(0)
 
 screen = t.Screen()
 screen.exitonclick()
