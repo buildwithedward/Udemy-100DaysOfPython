@@ -17,6 +17,7 @@ class Snake:
         self.head = self.segments[0]
 
     def create_snake(self):
+        """Creating Snakes by default"""
         for positions in STARTING_POSITIONS:
             tuts = Turtle(shape="square")
             tuts.penup()
@@ -25,6 +26,8 @@ class Snake:
             self.segments.append(tuts)  # appending turtles in list
 
     def move(self):
+        """To make the successor turtles to follow the head turtle even the head turtle 
+        changes its direction"""
         for seg_number in range(len(self.segments)-1, 0, -1):
             # making the nxt turtle to come to predecessor place in x axis
             new_x = self.segments[seg_number - 1].xcor()

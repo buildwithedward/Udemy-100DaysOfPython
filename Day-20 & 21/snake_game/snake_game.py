@@ -12,6 +12,7 @@ screen.tracer(0)
 snake = Snake()
 screen.listen()
 
+# 3. Moving the snake
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
 screen.onkey(snake.right, "Right")
@@ -22,7 +23,7 @@ is_game_on = True
 
 while is_game_on:
     screen.update()  # updating the screen
-    time.sleep(0.1)  # maing the turtle speed delay
+    time.sleep(0.1)  # making the turtle speed delay
     snake.move()
 
 screen.exitonclick()
