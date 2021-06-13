@@ -19,11 +19,21 @@ class Snake:
     def create_snake(self):
         """Creating Snakes by default"""
         for positions in STARTING_POSITIONS:
-            tuts = Turtle(shape="square")
-            tuts.penup()
-            tuts.color("white")
-            tuts.goto(positions)
-            self.segments.append(tuts)  # appending turtles in list
+            self.add_segment(positions)
+
+    def add_segment(self, position):
+        """add new segment to existing turtle when
+        snake head collides with food"""
+        tuts = Turtle(shape="square")
+        tuts.penup()
+        tuts.color("white")
+        tuts.goto(position)
+        self.segments.append(tuts)  # appending turtles in list
+
+    def extend(self):
+        """extending new segment at the position of 
+        already existing last segment"""
+        self.add_segment(self.segments[-1].position())
 
     def move(self):
         """To make the successor turtles to follow the head turtle even the head turtle 
