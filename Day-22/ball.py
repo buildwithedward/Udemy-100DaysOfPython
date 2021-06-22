@@ -27,5 +27,6 @@ class Ball(Turtle):
         self.x_move *= -1
 
     def reset_pos(self):
+        """when paddle misses, go to home and move ball towards another paddle"""
         self.goto(0, 0)
-        self.paddle_bounce()
+        self.paddle_bounce()  # reverses direction to another paddle when one paddle misses
