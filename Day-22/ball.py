@@ -13,6 +13,7 @@ class Ball(Turtle):
         self.penup()
         self.x_move = 10
         self.y_move = 10
+        self.ball_speed = 0.1
 
     def move(self):
         """When game starts, ball move in different direction"""
@@ -25,8 +26,10 @@ class Ball(Turtle):
 
     def paddle_bounce(self):
         self.x_move *= -1
+        self.ball_speed *= 0.9  # increases ball speed whenever it hits paddle
 
     def reset_pos(self):
         """when paddle misses, go to home and move ball towards another paddle"""
         self.goto(0, 0)
+        self.ball_speed = 0.1  # resetting the ball speed back to normal
         self.paddle_bounce()  # reverses direction to another paddle when one paddle misses
